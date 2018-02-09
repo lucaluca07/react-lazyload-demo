@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LazyLoad from './LazyLoad'; //延时加载
-import './list.css'
+import LazyLoad from '../LazyLoad'; //延时加载
+import './style.css'
 
 class List extends Component {
   constructor(){

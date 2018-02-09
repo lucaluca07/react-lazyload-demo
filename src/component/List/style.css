@@ -8,5 +8,5 @@
 }
 .list{
     height: 300px;
-    overflow: auto;
+    overflow: scroll;
 }

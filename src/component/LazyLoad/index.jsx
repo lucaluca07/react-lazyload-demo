@@ -1,5 +1,6 @@
 import React from 'react' ;
 import ReactDOM from 'react-dom';
+import getScrollParent from '../../unit/getScrollParent'
 
 export default class LazyLoad extends React.Component{
     constructor(){
@@ -10,7 +11,9 @@ export default class LazyLoad extends React.Component{
         //添加监听事件
         this.checkVisible(this);
         let timeoutId;
-        const parent = ReactDOM.findDOMNode(this).parentNode.parentNode;
+        const node = ReactDOM.findDOMNode(this) ;
+        const parent = getScrollParent(node);
+        console.log("parent:::",parent)
         parent.addEventListener("scroll",()=>{
             if (timeoutId) {
                 clearTimeout(timeoutId);
