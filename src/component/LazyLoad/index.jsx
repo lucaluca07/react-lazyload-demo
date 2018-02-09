@@ -28,7 +28,7 @@ export default class LazyLoad extends React.Component{
         const node = ReactDOM.findDOMNode(component)
         const {top} = node.getBoundingClientRect()
         const windowHeight = window.screen.height
-        console.log("check::::",top,windowHeight)
+        // console.log("check::::",top,windowHeight)
         if(windowHeight - top > 50){
             return true
         }
