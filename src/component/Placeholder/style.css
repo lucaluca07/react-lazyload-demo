@@ -1,0 +1,7 @@
+.palceholder{
+    height: 45px;
+    width: 45px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #999;
+}

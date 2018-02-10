@@ -6,6 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2>LazyloadDemo</h2>  
         <List/>
       </div>
     );
