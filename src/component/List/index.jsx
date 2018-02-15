@@ -3,12 +3,11 @@ import LazyLoad from '../LazyLoad';
 import Palcehoder from '../Placeholder'
 import logo from '../../static/image/captain.png'
 import './style.css'
-
+//例子
 class List extends Component {
   constructor(){
     super()
     this.state = ({arr:[]})
-    //this.callback = this.callback.bind(this)
   }
   componentWillMount(){
     const initItemLength = 100 ;
@@ -54,8 +53,6 @@ class List extends Component {
           }
         </div>
       </div>
-      
-
     );
   }
 }

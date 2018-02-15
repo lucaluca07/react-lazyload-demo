@@ -1,3 +1,4 @@
+//获取滚动的父元素
 const getScrollParent = (node) => {
     if(!node){
         return document.documentElement

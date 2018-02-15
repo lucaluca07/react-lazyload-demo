@@ -6,11 +6,11 @@ import PropTypes from 'prop-types'
 
 export default class LazyLoad extends React.Component{
     static propTypes = {
-        once:PropTypes.bool,
-        height:PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        offset:PropTypes.number,
-        placeholder:PropTypes.node,
-        children: PropTypes.node,
+        once:PropTypes.bool, //默认为false，为true时只执行一次懒加载
+        height:PropTypes.oneOfType([PropTypes.number, PropTypes.string]),//未传入placeholder时占位符的高度
+        offset:PropTypes.number,//偏移可视区域的高度
+        placeholder:PropTypes.node,//图片未加载时显示的背景
+        children: PropTypes.node,//子元素
     }
     constructor(props){
         super(props)
@@ -21,7 +21,7 @@ export default class LazyLoad extends React.Component{
         const node = ReactDOM.findDOMNode(this) ;
         const parent = getScrollParent(node);
         const checkedVisibleFn = this.checkedVisible(parent) ;
-
+        //先执行一次加载
         checkedVisibleFn()
         if(parent === document.documentElement){
             window.addEventListener("scroll",checkedVisibleFn,false)
