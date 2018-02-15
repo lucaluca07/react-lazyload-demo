@@ -15,27 +15,27 @@ export default class LazyLoad extends React.Component{
     constructor(props){
         super(props)
         this.state = {isVisible:false}
-        this.finalCheckVisible = this.finalCheckVisible.bind(this)
+        this.checkedVisible = this.checkedVisible.bind(this)
     }
     componentDidMount(){
         const node = ReactDOM.findDOMNode(this) ;
         const parent = getScrollParent(node);
-        const fn = this.finalCheckVisible(parent) ;
+        const checkedVisibleFn = this.checkedVisible(parent) ;
 
-        fn()
+        checkedVisibleFn()
         if(parent === document.documentElement){
-            window.addEventListener("scroll",fn,false)
+            window.addEventListener("scroll",checkedVisibleFn,false)
         }else{
-            parent.addEventListener("scroll",fn,false)
+            parent.addEventListener("scroll",checkedVisibleFn,false)
         }    
     }
     //闭包
-    finalCheckVisible(parent){
+    checkedVisible(parent){
         const once = this.props.once ;
         const offset = this.props.offset
         return throttle(()=>{   
-            const visible = this.state.isVisible 
-            if(!(once && visible)){
+            const visibleState = this.state.isVisible 
+            if(!(once && visibleState)){
                 const isVisible = checkVisible(this,offset,parent)
                 this.setState({isVisible})
             }   
@@ -43,18 +43,18 @@ export default class LazyLoad extends React.Component{
     }
     
     render(){
-        const isVisible = this.state.isVisible;
+        const visibleState = this.state.isVisible;
         const placeholder = this.props.placeholder
         const height = this.props.height
         return (
-            isVisible
+            visibleState
                 ?this.props.children
                 :!!placeholder?placeholder:(<div style={{"height":`${height}px`}}></div>)
         )
     }
 }
 LazyLoad.defaultProps = {
-    once: true,
+    once: false,
     offset: 0,
   };
 

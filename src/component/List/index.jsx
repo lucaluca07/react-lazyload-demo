@@ -26,7 +26,7 @@ class List extends Component {
           {
           arr.length > 0 
           ? arr.map((val, index) => (<div className="item" key={index}>
-            <LazyLoad once={true} offset={50} placeholder={<Palcehoder/>}>
+            <LazyLoad  offset={50} placeholder={<Palcehoder/>}>
               <img className="list-img" alt="item" src={logo}/>
             </LazyLoad>
             <div className="content">
