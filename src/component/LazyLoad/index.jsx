@@ -65,7 +65,7 @@ const checkVisible = (component,offset=100,parent) => {
     const {top:parentTop,bottom:parentBottom } = parent.getBoundingClientRect()
     const finalTop = Math.max(parentTop,0)
     const finalBottom = Math.min(parentBottom,windowHeight)
-    if(top > finalTop - 100 && top < finalBottom + 100){
+    if(top > finalTop - offset && top < finalBottom + offset){
         return true
     }
     return false
