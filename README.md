@@ -13,7 +13,7 @@
 
 编译成生产环境可使用的js文件.
 
-更多关于此demo的介绍可以查看我的博客：[http://www.cnblogs.com/voll/p/8431751.html](React懒加载组件实现)
+更多关于此demo的介绍可以查看我的博客：[React懒加载组件实现](http://www.cnblogs.com/voll/p/8431751.html)
 
 
 
