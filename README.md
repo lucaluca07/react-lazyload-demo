@@ -1,38 +1,19 @@
 
 
-## Available Scripts
-
-In the project directory, you can run:
+## 运行demo
+此demo是使用create-react-app构建的，所以运行脚本如下
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+在本地开发环境查看app运行效果<br>
+运行之后在浏览器中输入 [http://localhost:3000](http://localhost:3000) 即可查看.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+编译成生产环境可使用的js文件.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](#deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
+更多关于此demo的介绍可以查看我的博客：[http://www.cnblogs.com/voll/p/8431751.html](React懒加载组件实现)
 
 
 
