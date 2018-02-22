@@ -63,6 +63,7 @@ const checkVisible = (component,offset=100,parent) => {
     const {top} = node.getBoundingClientRect()
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
     const {top:parentTop,bottom:parentBottom } = parent.getBoundingClientRect()
+    //防止顶部溢出可视区域，parentTop为负值
     const finalTop = Math.max(parentTop,0)
     const finalBottom = Math.min(parentBottom,windowHeight)
     if(top > finalTop - offset && top < finalBottom + offset){
